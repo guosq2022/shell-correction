@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build run",
+            "type": "shell",
+            "command": "gfortran",
+            "args": [
+                "-g",
+                "${workspaceFolder}/src/*.f90",
+                "-J${workspaceFolder}/obj",
+                "-I${workspaceFolder}/obj",
+                "-o",
+                "${workspaceFolder}/run_hello_wsbeta.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+    ]
+}

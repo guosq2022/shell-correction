@@ -1,0 +1,4 @@
+{
+    "fortran.linter.modOutput": "${workspaceFolder}/obj",
+    "task.problemMatchers.neverPrompt": false,
+}
